@@ -17,6 +17,5 @@ struct ListNode* oddEvenList(struct ListNode* head) {
         even = even->next;
     }
     odd->next = evenHead;
-
     return head;
 }
