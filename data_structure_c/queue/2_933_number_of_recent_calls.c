@@ -22,7 +22,7 @@ int recentCounterPing(RecentCounter* obj, int t) {
     obj->times[obj->rear % obj->capacity] = t;
     obj->rear++;
 
-    // 確保範圍在 [t-3000, t]
+
     while (obj->front < obj->rear && obj->times[obj->front % obj->capacity] < t - 3000) {
         obj->front++;
     }
